@@ -1,0 +1,322 @@
+.footer {
+  background-color: $footer;
+  min-height: 30.6rem;
+
+  & .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &-left {
+    display: flex;
+    flex-direction: column;
+    max-width: 101.5rem;
+    width: 100%;
+    padding-right: 3.2rem;
+  }
+
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 4rem;
+
+
+    &__content {
+
+      &-link {
+        
+        
+        &-title {
+          
+          & h5 {
+            @include ProximaNovaBold(1.2rem, $white);
+            line-height: 15px;
+            letter-spacing: 1.12px;
+            text-transform: uppercase;
+            margin-bottom: 0.9rem;
+
+            opacity: 1;
+            transition: opacity 1s ease;
+
+            &:hover,
+            &:active {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+
+      
+
+      &-list {
+        
+
+        &-link {
+          
+          
+          & li {
+            @include ProximaNovaReg(1.2rem, #9D9C9C);
+            line-height: 24px;
+            transform: translateX(0px);
+            transition: transform 0.15s ease, color 0.2s ease;
+
+            &:hover,
+            &:active {
+              transform: translateX(3px);
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-bottom,
+  .desc_mobile {
+    @include ProximaNovaLight(1.2rem, #757474);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 4.2rem;
+    padding-bottom: 4rem;
+    margin-top: 1.7rem;
+    margin-left: 0.2rem;
+
+    & p {
+      max-width: 71.3rem;
+      line-height: 16px;
+      padding-right: 2rem;
+    }
+
+    &__link {
+      padding-left: 2rem;
+      & span {
+        @include ProximaNovaLight(1.2rem, #757474);
+        line-height: 14px;
+        letter-spacing: 0.3px;
+        margin-bottom: 0.6rem;
+        transition: color 0.15s ease-in;
+
+        &:hover,
+        &:active {
+          color: $white;
+          & .strong {
+            color: $white;
+        }
+      }
+  
+        &.strong {
+          @include ProximaNovaBold(1.2rem, #757474);
+          line-height: 14px;
+          letter-spacing: 0.3px;
+          transition: color 0.15s ease-in;
+        }
+      }
+
+      
+
+      &_mobile {
+        display: none;
+      }
+    } 
+  }
+
+  &-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 4.1rem;
+    padding-right: 3px;
+
+    &__logo {
+      margin-bottom: 3.8rem;
+    }
+
+    &__tel {
+      @include ProximaNovaThin(2.7rem, $white);
+      line-height: 31px;
+
+
+      &-link {
+
+        & span {
+          @include ProximaNovaReg(2.7rem, $white);
+        }
+      }
+    }
+
+    &__time {
+      @include ProximaNovaThin(1.4rem, #757474);
+      line-height: 17px;
+      margin-top: 0.6rem;
+      padding-left: 0.5rem;
+    }
+
+    &__email {
+      margin-top: 0.6rem;
+      margin-bottom: 4rem;
+      padding-left: 0.5rem;
+
+      &-link {
+        @include ProximaNovaThin(1.4rem, #757474);
+        line-height: 17px;
+        transition: all 0.15s ease-in;
+
+        &:hover {
+          color: $white;
+        }
+      }
+
+      
+      
+    }
+
+    &__social-media {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 12.8rem;
+      height: 1.6rem;
+      margin-left: 0.5rem;
+      
+      &-link {
+        fill: #484848;
+        transition: fill 0.15s ease-in;
+
+          &:hover {
+            fill: $white;
+          }
+
+        &-icon {
+          
+        }
+      }
+    }
+  }
+
+  &-mobile {
+    display: none;
+  }
+
+  
+}
+
+@media screen and (max-width: 1060px) {
+  .footer {
+    &-left,
+    &-aside {
+      display: none;
+    }
+
+    &-aside {
+      &__logo {
+        margin-bottom: 5.6rem;
+      }
+
+      &__tel_mobile {
+        margin-top: 4.8rem;
+        
+        @media screen and (max-width: 690px) {
+          font-size: 24px;
+          line-height: 29px;
+        }
+
+      }
+
+      &__time_mobile {
+        padding: 0;
+        margin-top: 1.6rem;
+        color: #C4C4C4;
+      }
+
+      &__email_mobile {
+        padding: 0;
+        margin-top: 1rem;
+        margin-bottom: 2.4rem;
+
+        &-link {
+          color: #C4C4C4;
+        }
+      }
+
+      &__social-media_mobile {
+        margin-bottom: 1.6rem;
+      }
+    }
+
+    &-mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 3.2rem auto 0;
+
+      & .desc_mobile {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        line-height: 16px;
+        letter-spacing: 0.3px;
+
+        @media screen and (max-width: 690px) {
+          font-size: 10px; 
+        }
+      }
+
+      & .full-version {
+        @include ProximaNovaLight(1.2rem, #757474);
+        line-height: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 1.6rem;
+        margin-bottom: 1.5rem;
+        transition: color 0.15s ease-in;
+
+        &:hover,
+        &:active {
+          color: $white;
+        }
+      }
+    }
+
+    &-main__content-link-title_mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & h5 {
+        margin-bottom: 1.6rem;
+      }
+    }
+
+
+  }
+
+  .footer-bottom__link_mobile {
+    @include ProximaNovaThin(1.2rem, #757474);
+    line-height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1D1D1D;
+    height: 4rem;
+    transition: color 0.3s ease-in;
+
+    &:hover,
+    &:active {
+        color: $white;
+        & .strong {
+          color: $white;
+      }
+    }
+
+    & .strong {
+      @include ProximaNovaReg(1.2rem, #757474);
+      line-height: 15px;
+      transition: color 0.3s ease-in;
+    }
+  }
+  
+}

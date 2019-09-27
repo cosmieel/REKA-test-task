@@ -1,0 +1,66 @@
+$top-banner: #01B0CB;
+$top-nav: #4F4F4F;
+$main-nav: #171717;
+$red: #CC1E2C;
+$black: #000;
+$white: #fff;
+$footer: #232323;
+$footer-gray: #9D9C9C;
+$footer-darkgrey: #757474;
+$menutop-text: #B0B0B0;
+
+$banner1: url('../img/banner1.png');
+$banner2: url('../img/banner2.png');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  @include ProximaNovaReg(1.4rem, $black);
+  line-height: 1;
+  overflow-X: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+ul {list-style: none;}
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+.wrapper {
+  width: 100%;
+  max-width: 1322px;
+  padding: 0 11px;
+  margin: 0 auto;
+}
+
+@import "./header.scss";
+
+@import "./main-section.scss";
+
+@import "./bestproducts.scss";
+
+@import "./shop-desc.scss";
+
+@import "./social.scss";
+
+@import "./footer.scss";
+
